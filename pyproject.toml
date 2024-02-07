@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "ios-unf"
+version = "0.0.0"
+description = "Quick iOS Backup UnFunkerizor"
+authors = ["mammo0 <marc.ammon@hotmail.de>"]
+homepage = "https://github.com/mammo0/iOS-UNF"
+readme = "README.md"
+
+
+packages = [
+    { include = "ios_unf" }
+]
+
+
+[tool.poetry.scripts]
+ios-unf = "ios_unf.main:run"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "semver"
+metadata = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
